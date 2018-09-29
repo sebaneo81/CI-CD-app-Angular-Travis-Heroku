@@ -8,7 +8,10 @@ branches:
     - develop
 
 cache:
-  directories: node_modules
+  directories: SimpleApp/node_modules
+
+before_install:
+  cd SimpleApp
 
 before_script:
   - npm install -g @angular/cli
