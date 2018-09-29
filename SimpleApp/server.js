@@ -20,7 +20,9 @@ const app = express();
 
 const PORT = process.env.PORT || 9999
 
-console.log('[INSIDE] My SimpleApp listening ' + __dirname + '/dist')
+const isHeroku =  (PORT != 9999)
+
+console.log('[' + isHeroku + '] My SimpleApp listening ' + __dirname + '/dist')
 
 app.use(express.static(__dirname + '/dist'));
 
@@ -28,4 +30,4 @@ app.listen(PORT, function() {
     console.log('Angular app running!  ');
 });
 
-console.log('My SimpleApp listening on port ' + PORT + ' - sobre /dist');
+console.log('My SimpleApp listening on port ' + (isHeroku?'':'http://localhost:') + PORT + ' - sobre /dist');
