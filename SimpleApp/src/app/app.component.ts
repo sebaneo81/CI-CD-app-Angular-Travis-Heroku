@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'My Sample App';
+
+  options: Object;
+
+  constructor() {
+    // Highcharts Integration
+    this.options = {
+      title : { text : 'Angular 2 high charts example with selection event ' },
+      chart: { zoomType: 'x'},
+      series: [{ data: [20.7, 88.8, 222.4, 154.2, 50, 17, 120], }]
+    };
+
+  }
 }
