@@ -22,12 +22,12 @@ script:
 deploy:
   - provider: heroku
     api_key:
-      secure: $HEROKU_KEY_USER_PABLOIN
+      secure: $KEY_HEROKU
     app:
       master: cicd-simple-app
       develop: cicd-simple-app-dev
     on:
-      repo: Pabloin/CI-CD-app-Angular-Travis-Heroku
+      repo: sebaneo81/CI-CD-app-Angular-Travis-Heroku
 
 
 notifications:
