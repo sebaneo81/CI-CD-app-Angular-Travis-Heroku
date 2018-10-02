@@ -24,8 +24,8 @@ deploy:
     api_key:
       secure: $KEY_HEROKU
     app:
-      master: cicd-simple-app
-      develop: cicd-simple-app-dev
+      master: sebaneo81-prod
+      develop: sebaneo81
     on:
       repo: sebaneo81/CI-CD-app-Angular-Travis-Heroku
 
